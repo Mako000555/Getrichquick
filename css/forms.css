@@ -31,28 +31,30 @@
   padding: 0;
 }
 
-#webform-4 {
+#form {
   accent-color: rgb(115, 196, 21);
 }
-#webform-4 label,
-#webform-4 input,
-#webform-4 button {
+
+#form label,
+#form input,
+#form button {
   display: block;
-  margin left: 10px;
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
-#webform-4 textarea {
-  width: 50%;
-  height: 60px;
+
+#form textarea {
+  accent-color: rgb(115, 196, 21);
+  font-size: 2rem;
+  height: 70px;
   padding: 0.5rem;
   resize: vertical;
 }
-#webform-4 textarea:focus {
-  background-color: rgb(255, 236, 239);
-}
-#webform-4 p {
+
+#form p {
   font-size: 1rem;
   margin: 0.2rem;
 }
-#webform-4 label {
+#form label {
   margin: 1rem 0 0.4rem 0;
 }

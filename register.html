@@ -26,14 +26,15 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>Varme besparelser</h1>
       <section id="form-section">
-        <h2>Overskrift</h2>
-        <p>Tekst</p>
-        <form id="webform-4">
+        <legend>
+          <h2>Kontaktoplysninger</h2>
+        </legend>
+        <form id="Form">
           <div class="form-group">
-            <label for="name">Navn</label>
-            <p>Fornavn</p>
+            <label for="name">Kontaktoplysninger</label>
+            <p></p>
             <input id="name" name="name" type="text" required />
           </div>
           <div>
@@ -46,7 +47,6 @@
             <input id="e-mail" name="e-mail" type="email" required />
           </div>
           <div class="form-group">
-            <label for="besked">Besked</label>
             <p>Beskriv med dine egne ord</p>
             <textarea name="besked" id="besked"></textarea>
           </div>
@@ -58,6 +58,13 @@
       <section id="form-summary">
         <h2>Summary</h2>
         <article>
+          <div id="sum">
+            <h3></h3>
+            <p></p>
+          </div>
+          <form>
+            <button id="button" type="reset"></button>
+          </form>
           <p class="placeholder">Opsummering</p>
         </article>
       </section>

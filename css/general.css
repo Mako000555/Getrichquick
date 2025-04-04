@@ -16,8 +16,7 @@ body {
   color: var(--primary-font-color);
   background-color: var(--primary-bg-color);
 }
-header,
-footer {
+header {
   background-color: var(--header-background-color);
   color: var(--secondary-font-color);
   height: min-content;
