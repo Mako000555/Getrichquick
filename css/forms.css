@@ -38,8 +38,9 @@
 #webform-4 input,
 #webform-4 button {
   display: block;
-  margin left: 10px;
+  margin-left: 20px;
 }
+
 #webform-4 textarea {
   width: 50%;
   height: 60px;
@@ -51,7 +52,7 @@
 }
 #webform-4 p {
   font-size: 1rem;
-  margin: 0.2rem;
+  margin-left: 20px;
 }
 #webform-4 label {
   margin: 1rem 0 0.4rem 0;
