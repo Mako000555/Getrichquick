@@ -1,0 +1,19 @@
+.dialog1,
+.dialog2,
+.dialog3 {
+  width: 500px;
+  max-width: 600px;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

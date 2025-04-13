@@ -28,7 +28,6 @@ footer {
 }
 #main-disclamer {
   height: 180px;
-  background-color: var(--header-background-color);
   display: flex;
   justify-content: flex-start;
   align-items: center;

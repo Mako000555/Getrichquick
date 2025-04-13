@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/dialog.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -16,7 +17,7 @@
     <header>
       <nav>
         <div id="logotype-wrapper">
-          <a href="index.html"> LOGOTYPE </a>
+          <a href="index.html"> SPAR PÅ NØRREBRO </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
@@ -26,53 +27,69 @@
     </header>
     <section id="main-disclamer">
       <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
-        <div>
-          <h1>Nørrebro i økonomisk modgang</h1>
-          <p>Nørrebro er dyrere end aldrig før - Det gør din kaffe og shawarma stiger i pris - mens børneværelserne bliver mindre og huslejen stiger</p>
-        </div>
+        <img src="./img/Logo.png" alt="ICON" />
+        <h1>Nørrebro i økonomisk modgang</h1>
+        <h3>"Fra billig øl til overpriced matcha - Nørrebro er ved at blive for fancy til sine egne beboere. Her er dine overlevelsesstrategier"</h3>
       </div>
     </section>
     <main>
       <section id="daily">
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img src="./img/nørrebrogade.jpg" alt="teaser_img" />
           <div class="daily_text">
-            <h2></h2>
+            <h2>Nørrebrogade</h2>
+            <p>Nørrebro er dyrere end aldrig før - Det gør din kaffe og shawarma stiger i pris - mens børneværelserne bliver mindre og huslejen stiger</p>
             <p>
               Hvordan kan du som lokal nørrebrobeboer sikre dig økonomisk overskud, så du kan leje en badmintonbane i nørrebrohallen og stadigvæk have råd til en filterkaffe i keas caffetecrie. Her er 3 indkomstmetoder der sikrer dig lidt ekstra
               mønt, i ægte nørrebro-ånd:
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <a href="instruction.html" class="cta_btn">Se mere</a>
           </div>
         </article>
         <article class="daily_card">
-          <img src="./img/Firefly draw a badminton ketcher 57349.jpg" alt="teaser_img" />
+          <img src="./img/Firefly badminton ketcher 28532.jpg" alt="teaser_img" />
           <div class="daily_text">
             <h2>Badmintonbaner stiger i pris igen</h2>
             <p>Nørrebrohallen medlte ud d. 3 april at de igen vil sætte prisen op for timeleje af badmintonbaner. Den nye prisklasse vil træde i kræft fra fredag d. 4 april</p>
-            <a href="" class="cta_btn">Se mere</a>
+            <p><button id="button1">Læs mere</button></p>
+            <dialog id="dialog1">
+              <form method="dialog">
+                <button id="closeBtn1">Luk</button>
+              </form>
+            </dialog>
           </div>
         </article>
       </section>
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p></p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h4>Hold din pung fyldt mens alt andet bliver tomt</h4>
+          <img src="./img/Firefly mand med penge 79705.jpg" alt="" />
+          <p><button id="button2">Læs mere</button></p>
+          <dialog id="dialog2">
+            <form method="dialog">
+              <p><label for="">Navn:</label></p>
+              <input type="text" id="" />
+              <button id="closeBtn2">Luk</button>
+            </form>
+          </dialog>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Sådan påvirker du shawarma inflationen:</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h4>Sådan påvirker du shawarma inflationen:</h4>
+          <img src="./img/Firefly normal shawarma 79705.jpg" alt="" />
+          <p>#RIP50krShawarma</p>
+          <p><button id="button3">Læs mere</button></p>
+          <dialog id="dialog3">
+            <form method="dialog">
+              <p><label for="">Navn:</label></p>
+              <input type="text" id="" />
+            </form>
+          </dialog>
         </article>
         <article class="news_card">
-          <h3>Tilmeld dig nyhed</h3>
-          <p>Tilmeld dig</p>
-          <img src="" alt="" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Tilmeld dig</h3>
+          <p>Tilmeld dig og få tilbud, kuponer mm.</p>
+          <img src="./img/Firefly inflation 37123.jpg" alt="" />
+          <a class="cta_btn" href="register.html">Læs mere</a>
         </article>
       </section>
     </main>
@@ -103,6 +120,6 @@
         </ul>
       </nav>
     </footer>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/front.js"></script>
   </body>
 </html>

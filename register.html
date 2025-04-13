@@ -26,29 +26,227 @@
     </header>
 
     <main>
-      <h1>Få inflations-ro</h1>
-      <section id="form-section">
-        <h2>Kontaktoplysninger</h2>
-        <form id="webform-4">
-          <div class="form-group">
-            <label for="name">Navn</label>
-            <p>Fornavn</p>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div>
-            <p>Efternavn</p>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div class="form-group">
-            <label for="e-mail">Email</label>
-            <p>E-mail</p>
-            <input id="e-mail" name="e-mail" type="email" required />
-          </div>
-          <div class="form-group">
-            <label for="besked">Besked</label>
-            <p>Beskriv med dine egne ord</p>
-            <textarea name="besked" id="besked"></textarea>
-          </div>
+<h1>Få inflations-ro</h1>
+        <section id="form-section">
+          <article id="form-info">
+            <h2>Kontaktoplysninger</h2>
+            <p>
+              Har du set en person med tomt blik, slæbende gang og et usundt udseende?<br />
+              Så er det afgørende, at du <strong>indberetter det med det samme.</strong> Hver observation hjælper myndighederne med at <strong>kortlægge spredningen</strong>, og reagere hurtigt. <br />Selv ét enkelt uindberettet møde kan føre til
+              <em>lokale udbrud</em>, panik – og i værste fald tab af liv.
+            </p>
+          </article>
+          <h3>Indberet Zombie-observation</h3>
+  
+          <form id="webform">
+            <!-- Hvornår -->
+            <!-- <fieldset id="when">
+              <legend>Hvornår?</legend>
+              <div class="form-group">
+                <p>Finder observationen sted lige nu?</p>
+                <input type="radio" id="today-yes" name="is-it-today" value="yes" required />
+                <label for="today-yes">Ja</label>
+                <input type="radio" id="today-no" name="is-it-today" value="no" required />
+                <label for="today-no">Nej</label>
+              </div>
+              <div id="date-field" class="form-group" style="display: none">
+                <p>Udfyld venligst dato og klokkeslet for observationen</p>
+                <label for="observation-date">Dato</label>
+                <input type="date" id="observation-date" name="observation-date" />
+                <label for="observation-time">Tid</label>
+                <input type="time" id="observation-time" name="observation-time" />
+              </div>
+            </fieldset> -->
+            <!-- Hvor -->
+            <fieldset id="where">
+              <legend>Hvor?</legend>
+              <p>Adresse (hvor fandt observationen sted?)</p>
+              <div class="formcontainer">
+                <div class="form-group">
+                  <label class="blok" for="location-street">Vejnavn</label>
+                  <input id="location-street" name="location-street" type="text" required />
+                </div>
+                <div class="form-group">
+                  <label class="blok" for="location-number">Husnr.</label>
+                  <input id="location-number" name="location-number" type="text" placeholder="fx 29" />
+                </div>
+                <div class="form-group">
+                  <label class="blok" for="location_city">By</label>
+                  <input id="location_city" name="location_city" type="text" placeholder="fx København" required />
+                </div>
+                <div class="form-group">
+                  <label class="blok" for="location-zipcode">Postnr.</label>
+                  <input id="location-zipcode" name="location-zipcode" type="text" pattern="\d{4}" placeholder="fx 2400" />
+                </div>
+              </div>
+            </fieldset>
+            <!-- Hvad - type og antal -->
+            <fieldset id="what">
+              <legend>Hvad?</legend>
+              <div class="formcontainer">
+                <div class="form-group">
+                  <label for="zombie-type">Hvilken slags Zombie så du?</label>
+                  <select name="zombie-type" id="zombie-type">
+                    <option value="" disabled selected>Vælg en type</option>
+                    <option value="Klassisk-romero-zombie">Klassisk Romero-Zombie</option>
+                    <option value="Loebe-zombie">Løbe-Zombie (Rage Zombie)</option>
+                    <option value="Intelligens-zombie">Intelligens-Zombie (Leder-Zombie)</option>
+                    <option value="Influencer-zombie">Influencer-Zombie</option>
+                    <option value="Mutations-zombie">Mutations-Zombie (Radioaktiv)</option>
+                    <option value="Kendis-zombie">Kendis-Zombie</option>
+                  </select>
+                </div>
+                <div id="zombie-info"></div>
+              </div>
+            </fieldset>
+            <!-- amount -->
+            <fieldset id="amount">
+              <legend>Antal?</legend>
+              <div class="form-group">
+                <!-- Section for selecting the number of zombies observed -->
+                <p>Hvor mange Zombier så du?</p>
+                <div>
+                  <input type="radio" id="zombie-count-1" name="zombie-count" value="1" required />
+                  <label for="zombie-count-1">1</label>
+                </div>
+                <div>
+                  <input type="radio" id="zombie-count-2-4" name="zombie-count" value="2-4" required />
+                  <label for="zombie-count-2-5">2-5</label>
+                </div>
+                <div>
+                  <input type="radio" id="zombie-count-5-10" name="zombie-count" value="5-10" required />
+                  <label for="zombie-count-5-10">5-10</label>
+                </div>
+                <div>
+                  <input type="radio" id="zombie-count-many" name="zombie-count" value="Flere end 10" required />
+                  <label for="zombie-count-flere-end-ti">Flere end 10</label>
+                </div>
+                <div>
+                  <input type="radio" id="zombie-count-uncountable" name="zombie-count" value="Så mange at jeg ikke kunne tælle dem" required />
+                  <label for="zombie-count-uncountable">Så mange at jeg ikke kunne tælle dem</label>
+                </div>
+              </div>
+            </fieldset>
+            <!-- Adfærd -->
+            <fieldset id="behavior">
+              <legend>Adfærd?</legend>
+              <p>Vælg gerne flere</p>
+              <div class="form-group">
+                <div>
+                  <input type="checkbox" id="behavior1" name="behavior" value="Slæbende/ukoordineret gang" />
+                  <label for="behavior1">Slæbende/ukoordineret gang</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior2" name="behavior" value="Forsøgte at bide eller angribe" />
+                  <label for="behavior2">Forsøgte at bide eller angribe</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior3" name="behavior" value="Udstødte lyde (som fx grynt eller støn)" />
+                  <label for="behavior3">Udstødte lyde (som fx grynt eller støn)</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior5" name="behavior" value="Gik direkte efter mennesker uden opfordring" />
+                  <label for="behavior5">Gik direkte efter mennesker uden opfordring</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior6" name="behavior" value="Stirrede tomt uden at blinke" />
+                  <label for="behavior6">Stirrede tomt uden at blinke</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior8" name="behavior" value="Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)" />
+                  <label for="behavior8">Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior9" name="behavior" value="Udviste flokadfærd (kom i gruppe, fulgte andre zombier)" />
+                  <label for="behavior9">Udviste flokadfærd (kom i gruppe, fulgte andre zombier)</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="behavior10" name="behavior" value="Ingen reaktion på smerte eller skade<" />
+                  <label for="behavior10">Ingen reaktion på smerte eller skade</label>
+                </div>
+              </div>
+            </fieldset>
+            <!-- Farlighed (range) -->
+            <fieldset id="danger">
+              <legend>Farlighed?</legend>
+              <label for="farlighed">Din vurdering af fareniveauet: <span id="range-value">0</span>%</label>
+              <input type="range" name="farlighed" id="farlighed" min="0" max="100" value="0" />
+            </fieldset>
+            <!-- Beskrivelse (tekst) -->
+            <fieldset id="description">
+              <legend>Hvad skete der?</legend>
+              <div class="form-group">
+                <label class="blok" for="beskrivelse">Beskriv din observation med egne ord og så mange detaljer som muligt </label>
+                <textarea id="beskrivelse" name="beskrivelse"></textarea>
+              </div>
+            </fieldset>
+            <!-- Kontakt -->
+            <fieldset id="contact">
+              <legend>Kontaktoplysninger</legend>
+              <div class="form-group">
+                <label class="blok" for="name">Dit fulde navn</label>
+                <input type="text" id="name" name="name" placeholder="Navn Efternavn" required />
+              </div>
+              <div class="form-group">
+                <label class="blok" for="email">Din email </label>
+                <input type="email" id="email" name="email" placeholder="emailadresse" required />
+              </div>
+              <div class="form-group">
+                <p><strong>Udfyld Telefonnummer hvis du vil kontaktes akut...</strong></p>
+                <div class="formcontainer">
+                  <div class="form-group">
+                    <label for="area-code" class="blok">Land</label>
+                    <select id="area-code" name="area-code">
+                      <option value="+45" selected>+45(DK)</option>
+                      <option value="+46">+46(SE)</option>
+                      <option value="+47">+47(NO)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="telefon" class="blok">Telefonnummer</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="Telefonnummer" />
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <!-- Submit button -->
+            <button id="submit_btn" type="button">Indsend &#8594;</button>
+          </form>
+        </section>
+        <section id="form-summary">
+          <h2>Summary</h2>
+          <article id="sum">
+            <div>
+              <h3>Adresse:</h3>
+              <p id="sumStreet"></p>
+            </div>
+            <div>
+              <h3>Husnr.:</h3>
+              <p id="sumNumber"></p>
+            </div>
+            <div>
+              <h3>Postnr.:</h3>
+              <p id="sumZip"></p>
+            </div>
+            <div>
+              <h3>By:</h3>
+              <p id="sumCity"></p>
+            </div>
+            <div>
+              <h3>Type:</h3>
+              <p id="sumType"></p>
+            </div>
+            <div>
+              <h3>Antal:</h3>
+              <p id="sumAntal"></p>
+            </div>
+            <div>
+              <h3>Adfærd:</h3>
+              <p id="sumBehaviour"></p>
+            </div>
+            <button id="reset_btn" type="reset">Godkend og luk</button>
+          </article>
+        </section>
           <button id="submit_btn" type="submit">Send</button>
         </form>
         <article id="form-info"></article>
