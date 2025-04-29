@@ -16,7 +16,7 @@
     <header>
       <nav>
         <div id="logotype-wrapper">
-          <a href="index.html"> LOGOTYPE </a>
+          <a href="index.html"> SPAR PÅ NØRREBRO </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
@@ -31,12 +31,12 @@
           <article id="form-info">
             <h2>Kontaktoplysninger</h2>
             <p>
-              Har du set en person med tomt blik, slæbende gang og et usundt udseende?<br />
-              Så er det afgørende, at du <strong>indberetter det med det samme.</strong> Hver observation hjælper myndighederne med at <strong>kortlægge spredningen</strong>, og reagere hurtigt. <br />Selv ét enkelt uindberettet møde kan føre til
-              <em>lokale udbrud</em>, panik – og i værste fald tab af liv.
+              Nørrebro er dyrt, tilmeld dig vores tilbuds-avis der sikrer dig at du sparer lidt monetos i løbet af måneden<br />
+              <strong></strong><strong></strong> <br />
+              <em></em>
             </p>
           </article>
-          <h3>Indberet Zombie-observation</h3>
+          <h3>Få besparelses-brev</h3>
   
           <form id="webform">
             <!-- Hvornår -->
@@ -57,7 +57,7 @@
                 <input type="time" id="observation-time" name="observation-time" />
               </div>
             </fieldset> -->
-            <!-- Hvor -->
+            <!---->
             <fieldset id="where">
               <legend>Hvor?</legend>
               <p>Adresse (hvor fandt observationen sted?)</p>
@@ -85,102 +85,28 @@
               <legend>Hvad?</legend>
               <div class="formcontainer">
                 <div class="form-group">
-                  <label for="zombie-type">Hvilken slags Zombie så du?</label>
-                  <select name="zombie-type" id="zombie-type">
+                  <label for="udgift-type">Hvilken type udgift har du sværest ved at give slip på?</label>
+                  <select name="udgift-type" id="udgift-type">
                     <option value="" disabled selected>Vælg en type</option>
-                    <option value="Klassisk-romero-zombie">Klassisk Romero-Zombie</option>
-                    <option value="Loebe-zombie">Løbe-Zombie (Rage Zombie)</option>
-                    <option value="Intelligens-zombie">Intelligens-Zombie (Leder-Zombie)</option>
-                    <option value="Influencer-zombie">Influencer-Zombie</option>
-                    <option value="Mutations-zombie">Mutations-Zombie (Radioaktiv)</option>
-                    <option value="Kendis-zombie">Kendis-Zombie</option>
+                    <option value="Kebab"">Kebab</option>
+                    <option value="Øl">Øl</option>
+                    <option value="Streaming">Streaming tjenester</option>
+                    <option value="Kaffe">Kaffe</option>
                   </select>
                 </div>
-                <div id="zombie-info"></div>
+                <div id="info"></div>
               </div>
             </fieldset>
-            <!-- amount -->
-            <fieldset id="amount">
-              <legend>Antal?</legend>
-              <div class="form-group">
-                <!-- Section for selecting the number of zombies observed -->
-                <p>Hvor mange Zombier så du?</p>
-                <div>
-                  <input type="radio" id="zombie-count-1" name="zombie-count" value="1" required />
-                  <label for="zombie-count-1">1</label>
-                </div>
-                <div>
-                  <input type="radio" id="zombie-count-2-4" name="zombie-count" value="2-4" required />
-                  <label for="zombie-count-2-5">2-5</label>
-                </div>
-                <div>
-                  <input type="radio" id="zombie-count-5-10" name="zombie-count" value="5-10" required />
-                  <label for="zombie-count-5-10">5-10</label>
-                </div>
-                <div>
-                  <input type="radio" id="zombie-count-many" name="zombie-count" value="Flere end 10" required />
-                  <label for="zombie-count-flere-end-ti">Flere end 10</label>
-                </div>
-                <div>
-                  <input type="radio" id="zombie-count-uncountable" name="zombie-count" value="Så mange at jeg ikke kunne tælle dem" required />
-                  <label for="zombie-count-uncountable">Så mange at jeg ikke kunne tælle dem</label>
-                </div>
-              </div>
+            <!----> 
             </fieldset>
-            <!-- Adfærd -->
-            <fieldset id="behavior">
-              <legend>Adfærd?</legend>
-              <p>Vælg gerne flere</p>
-              <div class="form-group">
-                <div>
-                  <input type="checkbox" id="behavior1" name="behavior" value="Slæbende/ukoordineret gang" />
-                  <label for="behavior1">Slæbende/ukoordineret gang</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior2" name="behavior" value="Forsøgte at bide eller angribe" />
-                  <label for="behavior2">Forsøgte at bide eller angribe</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior3" name="behavior" value="Udstødte lyde (som fx grynt eller støn)" />
-                  <label for="behavior3">Udstødte lyde (som fx grynt eller støn)</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior5" name="behavior" value="Gik direkte efter mennesker uden opfordring" />
-                  <label for="behavior5">Gik direkte efter mennesker uden opfordring</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior6" name="behavior" value="Stirrede tomt uden at blinke" />
-                  <label for="behavior6">Stirrede tomt uden at blinke</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior8" name="behavior" value="Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)" />
-                  <label for="behavior8">Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior9" name="behavior" value="Udviste flokadfærd (kom i gruppe, fulgte andre zombier)" />
-                  <label for="behavior9">Udviste flokadfærd (kom i gruppe, fulgte andre zombier)</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="behavior10" name="behavior" value="Ingen reaktion på smerte eller skade<" />
-                  <label for="behavior10">Ingen reaktion på smerte eller skade</label>
-                </div>
-              </div>
-            </fieldset>
-            <!-- Farlighed (range) -->
+            <!---->
             <fieldset id="danger">
-              <legend>Farlighed?</legend>
-              <label for="farlighed">Din vurdering af fareniveauet: <span id="range-value">0</span>%</label>
+              <legend>Brokeness</legend>
+              <label for="brokeness">Hvor broke er du på en skala?: <span id="range-value">0</span>%</label>
               <input type="range" name="farlighed" id="farlighed" min="0" max="100" value="0" />
             </fieldset>
-            <!-- Beskrivelse (tekst) -->
-            <fieldset id="description">
-              <legend>Hvad skete der?</legend>
-              <div class="form-group">
-                <label class="blok" for="beskrivelse">Beskriv din observation med egne ord og så mange detaljer som muligt </label>
-                <textarea id="beskrivelse" name="beskrivelse"></textarea>
-              </div>
-            </fieldset>
-            <!-- Kontakt -->
+            <!---->
+            <!---->
             <fieldset id="contact">
               <legend>Kontaktoplysninger</legend>
               <div class="form-group">

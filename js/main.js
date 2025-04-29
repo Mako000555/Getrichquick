@@ -44,12 +44,26 @@ function coffeeUNlight() {
 function coffeeInfo() {
   console.log("coffeeInfo");
 
-  animateboxes();
-
+  animateboxes(); 
   document.querySelector("#efficiency").classList.remove("hide");
   document.querySelector("#requirement").classList.remove("hide");
   document.querySelector("#efficiency").classList.add("fadein");
   document.querySelector("#requirement").classList.add("fadein");
+}
+
+function animateboxes() {
+  console.log("animateboxes");
+  document.querySelector("#efficiency").classList.remove("hide");
+  document.querySelector("#requirement").classList.remove("hide");
+  document.querySelector("#efficiency").classList.add("fadein");
+  document.querySelector("#requirement").classList.add("fadein");
+}
+
+function cleanup() {
+  console.log("cleanup");
+  document.querySelector("#requirement").removeEventListener("animationend", cleanup);
+  document.querySelector("#efficiency").classList.remove("fadeIn");
+  document.querySelector("#requirement").classList.remove("fadeIn");
 }
 
 function grafitilight() {
@@ -62,11 +76,10 @@ function grafitiUNlight() {
   document.querySelector("#grafiti").style.fill = "#f00";
 }
 
-function grafitiInfo() {
+function grafitiInfo()
   console.log("grafitiInfo");
 
-  animateboxes();
-
+  animateboxes() ; {
   document.querySelector("#efficiency").classList.remove("hide");
   document.querySelector("#requirement").classList.remove("hide");
   document.querySelector("#efficiency").classList.add("fadein");
